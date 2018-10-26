@@ -1,0 +1,5 @@
+-r base.txt
+ddt                                 # Required by 'xblock' for its test code, which we import
+mock                                # Required by 'xblock' for its test code, which we import
+pycodestyle                         # For checking PEP8 compliance
+tox                                 # For running tests in multiple python versions

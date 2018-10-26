@@ -1,0 +1,4 @@
+django-statici18n
+edx-i18n-tools
+Mako                                # Not sure why this is needed?
+transifex-client
