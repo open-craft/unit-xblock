@@ -3,10 +3,10 @@ An XBlock which groups related XBlocks together.
 """
 from __future__ import absolute_import, division, print_function, unicode_literals
 
+from web_fragments.fragment import Fragment
 from xblock.completable import XBlockCompletionMode
 from xblock.core import XBlock
 from xblock.fields import Scope, String
-from xblock.fragment import Fragment
 
 
 # Make '_' a no-op so we can scrape strings.
@@ -40,7 +40,7 @@ class UnitXBlock(XBlock):
         """Provide default student view."""
         result = Fragment()
         child_frags = self.runtime.render_children(self, context=context)
-        result.add_frags_resources(child_frags)
+        result.add_resources(child_frags)
         result.add_content('<div class="unit-xblock vertical">')
         for frag in child_frags:
             result.add_content(frag.content)

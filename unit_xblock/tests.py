@@ -3,8 +3,9 @@ import re
 import unittest
 from xml.dom import minidom
 
+from web_fragments.fragment import Fragment
 from xblock.core import XBlock
-from xblock.fragment import Fragment
+from xblock.completable import XBlockCompletionMode
 from xblock.test.test_parsing import XmlTest
 
 from unit_xblock import UnitXBlock
@@ -62,7 +63,6 @@ class UnitXBlockTests(XmlTest, unittest.TestCase):
         ))
 
     def test_is_aggregator(self):
-        from xblock.completable import XBlockCompletionMode
         self.assertEqual(XBlockCompletionMode.get_mode(UnitXBlock), XBlockCompletionMode.AGGREGATOR)
 
     def assertXmlEqual(self, xml_str_a, xml_str_b):
