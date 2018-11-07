@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/unit-xblock-test
+    docker:
+      - image: circleci/python:3.6
+    steps:
+      - run: sudo apt-get -y -qq install python-dev
+      - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
+
+      - restore_cache:
+          key: deps1-{{ .Branch }}--{{ checksum "requirements/base.txt" }}-{{ checksum "requirements/test.txt" }}
+      - run:
+          name: Installing requirements
+          command: |
+            pip install -r requirements/test.txt
+      - save_cache:
+          key: deps1-{{ .Branch }}--{{ checksum "requirements/base.txt" }}-{{ checksum "requirements/test.txt" }}
+          paths:
+            - "/usr/local/bin"
+            - "/usr/local/lib/python3.6/site-packages"
+      - run:
+          command: |
+            make test

@@ -1,0 +1,2 @@
+XBlock>=1.1.0                       # We need an XBlock version that includes XBlockCompletionMode
+
