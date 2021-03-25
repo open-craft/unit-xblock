@@ -4,26 +4,61 @@
 #
 #    make upgrade
 #
-certifi==2018.10.15       # via requests
-chardet==3.0.4            # via requests
-contextlib2==0.5.5        # via importlib-metadata
-django-appconf==1.0.2     # via django-statici18n
+backports.os==0.1.1
+    # via path.py
+certifi==2018.10.15
+    # via requests
+chardet==3.0.4
+    # via requests
+contextlib2==0.5.5
+    # via importlib-metadata
+django-appconf==1.0.2
+    # via django-statici18n
 django-statici18n==1.8.2
-django==1.11.16           # via django-statici18n, edx-i18n-tools
+    # via -r localize.in
+django==1.11.16
+    # via
+    #   django-statici18n
+    #   edx-i18n-tools
 edx-i18n-tools==0.4.7
-idna==2.7                 # via requests
-importlib-metadata==0.6   # via path.py
+    # via -r localize.in
+future==0.18.2
+    # via backports.os
+idna==2.7
+    # via requests
+importlib-metadata==0.6
+    # via path.py
 mako==1.0.7
-markupsafe==1.0           # via mako
-path.py==11.5.0           # via edx-i18n-tools
-pathlib2==2.3.2           # via importlib-metadata
-polib==1.1.0              # via edx-i18n-tools
-python-slugify==1.2.6     # via transifex-client
-pytz==2018.6              # via django
-pyyaml==3.13              # via edx-i18n-tools
-requests==2.20.0          # via transifex-client
-scandir==1.9.0            # via pathlib2
-six==1.11.0               # via django-statici18n, edx-i18n-tools, pathlib2, transifex-client
+    # via -r localize.in
+markupsafe==1.0
+    # via mako
+path.py==11.5.0
+    # via edx-i18n-tools
+pathlib2==2.3.2
+    # via importlib-metadata
+polib==1.1.0
+    # via edx-i18n-tools
+python-slugify==1.2.6
+    # via transifex-client
+pytz==2018.6
+    # via django
+pyyaml==5.4
+    # via edx-i18n-tools
+requests==2.20.0
+    # via transifex-client
+scandir==1.9.0
+    # via pathlib2
+six==1.11.0
+    # via
+    #   django-statici18n
+    #   edx-i18n-tools
+    #   pathlib2
+    #   transifex-client
 transifex-client==0.13.5
-unidecode==1.0.22         # via python-slugify
-urllib3==1.23             # via requests, transifex-client
+    # via -r localize.in
+unidecode==1.0.22
+    # via python-slugify
+urllib3==1.23
+    # via
+    #   requests
+    #   transifex-client

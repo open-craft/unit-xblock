@@ -5,28 +5,87 @@
 #    make upgrade
 #
 appdirs==1.4.3
+    # via
+    #   -r base.txt
+    #   fs
 backports.os==0.1.1
+    # via
+    #   -r base.txt
+    #   fs
 ddt==1.2.0
+    # via -r test.in
 enum34==1.1.6
-filelock==3.0.9           # via tox
+    # via
+    #   -r base.txt
+    #   fs
+filelock==3.0.9
+    # via tox
 fs==2.1.1
-funcsigs==1.0.2           # via mock
+    # via
+    #   -r base.txt
+    #   xblock
+funcsigs==1.0.2
+    # via mock
 future==0.17.0
+    # via
+    #   -r base.txt
+    #   backports.os
 lxml==4.2.5
+    # via
+    #   -r base.txt
+    #   xblock
 markupsafe==1.0
+    # via
+    #   -r base.txt
+    #   xblock
 mock==2.0.0
-pbr==5.1.0                # via mock
-pluggy==0.8.0             # via tox
-py==1.7.0                 # via tox
+    # via -r test.in
+pbr==5.1.0
+    # via mock
+pluggy==0.8.0
+    # via tox
+py==1.7.0
+    # via tox
 pycodestyle==2.4.0
+    # via -r test.in
 python-dateutil==2.7.4
+    # via
+    #   -r base.txt
+    #   xblock
 pytz==2018.6
-pyyaml==3.13
+    # via
+    #   -r base.txt
+    #   fs
+    #   xblock
+pyyaml==5.4
+    # via
+    #   -r base.txt
+    #   xblock
 six==1.11.0
-toml==0.10.0              # via tox
+    # via
+    #   -r base.txt
+    #   fs
+    #   mock
+    #   python-dateutil
+    #   tox
+    #   xblock
+toml==0.10.0
+    # via tox
 tox==3.5.2
+    # via -r test.in
 typing==3.6.6
-virtualenv==16.0.0        # via tox
+    # via
+    #   -r base.txt
+    #   fs
+virtualenv==16.0.0
+    # via tox
 web-fragments==0.2.2
+    # via
+    #   -r base.txt
+    #   xblock
 webob==1.8.3
+    # via
+    #   -r base.txt
+    #   xblock
 xblock==1.2.2
+    # via -r base.txt
